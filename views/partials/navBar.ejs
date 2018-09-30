@@ -1,0 +1,39 @@
+    <nav class="navbar navbar-inverse" style="background-color: black;">
+    	<div class="">
+    		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+    				<span class="sr-only">Toggle navigation</span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    				<span class="icon-bar"></span>
+    		</button>
+        	<div class="collapse navbar-collapse top-nav w3l" id="bs-example-navbar-collapse-1">
+        		<ul class="nav navbar-nav linkEffects linkHoverEffect_11 custom-menu">
+        			<li><a href="/" class="scroll"><span>home</span></a></li>
+        			<li><a href="#about"><span>about</span></a></li>
+        			<li><a href="#contact"><span>contact</span></a></li>
+        		</ul>
+        		
+        		<ul class="nav navbar-nav navbar-right linkEffects linkHoverEffect_11 custom-menu">
+            	    <% if(!currentUser){ %>
+                      <li class="<%= typeof page !== 'undefined' && page === 'login' ? 'agile_active' : '' %>"><a href="/login"><span>Login</span></a></li>
+                      <li class="<%= typeof page !== 'undefined' && page === 'register' ? 'agile_active' : '' %>"><a href="/register"></i> <span>Sign Up</span></a></li>
+                    <% } else { %>
+                      <li><a href="#"><i class="fa fa-user-circle" aria-hidden="true"></i> <span>Signed In As <%= currentUser.username %></span></a></li>
+                      <li><a href="/logout"><i class="fa fa-sign-out" aria-hidden="true"></i> <span>Logout</span></a></li>
+                    <% } %>
+                </ul>
+        		
+        	</div>
+    	</div>
+    </nav>
+    
+    <br/>
+    
+    <div class="container">
+        <% if(error && error.length){ %>
+        <div class="alert alert-danger"><%= error %></div>
+        <% } %>
+        <% if(success && success.length){ %>
+        <div class="alert alert-success"><%= success %></div>
+        <% } %>
+    </div>

@@ -1,0 +1,29 @@
+<% include partials/header %>
+<% include partials/navBar %>
+
+<div class="container">
+    <h1 class="text-center">Login</h1>
+    <form action="/login" method="post" style="width: 30%; margin: 25px auto;">
+        <div class="form-group">
+            <input class="form-control" type="text" name="username" placeholder="username">
+        </div>    
+        <div class="form-group">
+            <input class="form-control" type="password" name="password" placeholder="password">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary btn-block">Submit</button>
+        </div>
+        <a href="/photos">Go Back</a>
+        <br>
+        <br>
+        <br>
+        <div class="well">
+            For demo purpose, some accounts were created for you OR you can create a new one<hr>
+            <i><b>username:</b> user1 --- <b>password:</b> user1</i>
+            <i><b>username:</b> user2 --- <b>password:</b> user2</i>
+            <i><b>username:</b> user3 --- <b>password:</b> user3</i>
+        </div>
+    </form>  
+</div>
+
+<% include partials/footer %>

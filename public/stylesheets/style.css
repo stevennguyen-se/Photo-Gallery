@@ -1,0 +1,360 @@
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+#map {
+    height: 400px;
+    width: 100%;
+}
+
+.btn {
+    border-radius: 0;
+}
+
+.form-control {
+    border-radius: 0;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background: #FFF;
+}
+
+body a {
+    transition: 0.5s all;
+    -webkit-transition: 0.5s all;
+    -moz-transition: 0.5s all;
+    -o-transition: 0.5s all;
+    -ms-transition: 0.5s all;
+    text-decoration: none;
+}
+
+body a:hover {
+    text-decoration: none;
+}
+
+body a:focus,
+a:hover {
+    text-decoration: none;
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+label {
+    margin: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/*-- header styling starts here --*/
+
+.agileits_main {
+    background: url(../images/cover.PNG) no-repeat center;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+}
+
+/*-- banner --*/
+
+.banner_text_w3layouts {
+    text-align: center;
+    padding: 16.5em 0;
+}
+
+.banner_text_w3layouts h3 {
+    color: #fff;
+    font-size: 4em;
+    margin: 0;
+    font-weight: 700;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.banner_text_w3layouts span {
+    width: 38%;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.29);
+    display: inline-block;
+    margin: 1.5em 0 0.5em;
+}
+
+.banner_text_w3layouts p {
+    color: #fff;
+    font-size: 1.3em;
+    margin: 0.5em;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    font-weight: 300;
+}
+
+.navbar-inverse {
+    background: rgba(0, 0, 0, 0.44);
+    border: none;
+    margin: 0;
+    border-radius: 0px;
+}
+
+.top-nav ul li a {
+    padding: 1.8em;
+    margin: 0 1em;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
+}
+
+
+.linkHoverEffect_11 a {
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    -moz-transition: ease-out 0.3s;
+    -o-transition: ease-out 0.3s;
+    -webkit-transition: ease-out 0.3s;
+    transition: ease-out 0.3s;
+}
+
+.linkHoverEffect_11 a span::before {
+    background: transparent;
+    width: 6px;
+    height: 6px;
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top: 2px solid greenyellow;
+    border-left: 2px solid greenyellow;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.linkHoverEffect_11 a span::after {
+    background: transparent;
+    width: 6px;
+    height: 6px;
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-right: 2px solid greenyellow;
+    border-bottom: 2px solid greenyellow;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.linkHoverEffect_11 a::before {
+    background: transparent;
+    width: 6px;
+    height: 6px;
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    border-right: 2px solid greenyellow;
+    border-top: 2px solid greenyellow;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.linkHoverEffect_11 a::after {
+    background: transparent;
+    width: 6px;
+    height: 6px;
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-left: 2px solid greenyellow;
+    border-bottom: 2px solid greenyellow;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.top-nav .linkHoverEffect_11 li a:hover,
+.top-nav .linkHoverEffect_11 li.agile_active a {
+    color: greenyellow;
+}
+
+.linkHoverEffect_11 a:hover::before,
+li.agile_active a::before {
+    opacity: 1;
+    right: 6px;
+    top: 6px;
+}
+
+.linkHoverEffect_11 a:hover::after,
+li.agile_active a::after {
+    opacity: 1;
+    left: 6px;
+    bottom: 6px;
+}
+
+.linkHoverEffect_11 a:hover span::before,
+li.agile_active a span::before {
+    opacity: 1;
+    left: 6px;
+    top: 6px;
+}
+
+.linkHoverEffect_11 a:hover span::after,
+li.agile_active a span::after {
+    opacity: 1;
+    right: 6px;
+    bottom: 6px;
+}
+
+.btn-add {
+    padding: 1em;
+    margin-right: 1em;
+    text-transform: uppercase;
+    font-size: 1em;
+    letter-spacing: 1px;
+    color: greenyellow;
+    background-color: none;
+    border-radius: 0;
+    border: solid 1px greenyellow;
+}
+
+.btn-add:hover {
+    color: white;
+    background-color: green;
+}
+
+.fh5co-gallery .gallery-item .overlay {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    top: 0;
+    z-index: 11;
+    vertical-align: middle;
+    padding-top: 30%;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: 0.5s;
+    -o-transition: 0.5s;
+    transition: 0.5s;
+}
+
+.fh5co-gallery .gallery-item .overlay h2,
+.fh5co-gallery .gallery-item .overlay span {
+    position: relative;
+    z-index: 12;
+    margin-bottom: 0;
+    text-align: center;
+    display: block;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.fh5co-gallery .gallery-item .overlay h2 {
+    color: #fff;
+    font-size: 26px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    bottom: -15px;
+}
+
+@media screen and (max-width: 768px) {
+    .fh5co-gallery .gallery-item .overlay h2 {
+        font-size: 18px;
+    }
+}
+
+.fh5co-gallery .gallery-item .overlay span {
+    color: #7ac143;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 400;
+    bottom: -5px;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.fh5co-gallery .gallery-item .overlay:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.fh5co-gallery .gallery-item:hover img {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+}
+
+.fh5co-gallery .gallery-item:hover .overlay {
+    visibility: visible;
+    opacity: 1;
+}
+
+.fh5co-gallery .gallery-item:hover .overlay:before {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.fh5co-gallery .gallery-item:hover .overlay h2 {
+    bottom: 0px;
+}
+
+.fh5co-gallery .gallery-item:hover .overlay span {
+    visibility: visible;
+    opacity: 1;
+    bottom: 0px;
+}

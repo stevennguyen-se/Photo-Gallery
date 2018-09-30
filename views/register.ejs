@@ -1,0 +1,30 @@
+<% include partials/header %>
+<% include partials/navBar %>
+
+<div class="container">
+    <h1 class="text-center">Sign Up</h1>
+    <form action="/register" method="post" style="width: 30%; margin: 25px auto;">
+        <div class="form-group">
+            <input class="form-control" type="text" name="username" placeholder="* username">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="password" name="password" placeholder="* password">
+        </div>
+        <div class="form-group">
+            <input class="form-control" type="text" name="adminCode" placeholder="Admin code">
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary btn-block">Sign Up</button>
+        </div>
+        <a href="/photos">Go Back</a>
+        
+        <br>
+        <br>
+        <br>
+        <div class="well">
+            Admin code is used to create Admin Accounts 
+        </div>
+    </form>
+</div>
+
+<% include partials/footer %>
