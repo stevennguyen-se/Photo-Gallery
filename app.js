@@ -6,7 +6,6 @@ var passport = require("passport");
 var LocalStrategy = require("passport-local");
 var methodOverride = require("method-override");
 var flash = require("connect-flash");
-var geocoder = require("geocoder");
 
 var Campground = require("./models/campground.js");
 var Comment = require("./models/comment.js");
@@ -93,7 +92,7 @@ app.post("/photos", middleware.isLoggedIn, function(req, res) {
         req.body.name = "N/A";
     }
     var name = req.body.name;
-    var price = req.body.price;
+   
     if (req.body.imgURL.length < 4) {
         req.body.imgURL = "http://placehold.it/600x400";
     }
@@ -266,25 +265,15 @@ app.get("/photos/:id/edit", middleware.isCampgroundOwner, function(req, res) {
 });
 
 app.put("/photos/:id", middleware.isCampgroundOwner, function(req, res) {
-    geocoder.geocode(req.body.location, function(err, data) {
+    var newData = { name: req.body.name, imageURL: req.body.imageURL, description: req.body.description };
+    Campground.findByIdAndUpdate(req.params.id, { $set: newData }, function(err, campground) {
         if (err) {
+            req.flash("error", err.message);
             res.redirect("back");
         }
         else {
-            var lat = data.results[0].geometry.location.lat;
-            var lng = data.results[0].geometry.location.lng;
-            var location = data.results[0].formatted_address;
-            var newData = { name: req.body.name, imageURL: req.body.imageURL, description: req.body.description, price: req.body.price, location: location, lat: lat, lng: lng };
-            Campground.findByIdAndUpdate(req.params.id, { $set: newData }, function(err, campground) {
-                if (err) {
-                    req.flash("error", err.message);
-                    res.redirect("back");
-                }
-                else {
-                    req.flash("success", "Successfully Updated!");
-                    res.redirect("/photos/" + campground._id);
-                }
-            });
+            req.flash("success", "Successfully Updated!");
+            res.redirect("/photos/" + campground._id);
         }
     });
 });
