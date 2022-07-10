@@ -4,7 +4,7 @@
 <h1 class="text-center">Edit <%= campground.name %> </h1>
 <div class="container">
     <div style="width: 30%; margin: 0 auto;">
-        <form action="/places/<%= campground._id %>/?_method=put" method="post">
+        <form action="/photos/<%= campground._id %>/?_method=put" method="post">
             <div class="form-group">
                <label for="name">Title ...</label>
                <input class="form-control" type="text" name="name" placeholder="name" value="<%= campground.name %>" required> 
