@@ -42,7 +42,7 @@ app.use(function(req, res, next) {
 //db.dropDatabase() to drop a database
 //db.collectionName.drop() to drop a collection in a database
 
-mongoose.connect("mongodb://newuser:4444aa@ds119523.mlab.com:19523/photodatabase", { useNewUrlParser: true });
+mongoose.connect("mongodb+srv://photohub:lMdesZx0dl0Vo4P6@cluster0.ad6nuln.mongodb.net/?retryWrites=true&w=majority", {useNewUrlParser: true, useUnifiedTopology: true});
 
 
 
