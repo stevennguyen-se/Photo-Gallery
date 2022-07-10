@@ -243,9 +243,15 @@ app.get("/login", function(req, res) {
 app.post("/login", passport.authenticate("local", { successRedirect: "/photos", failureRedirect: "/login" }), function(req, res) {});
 
 app.get("/logout", function(req, res) {
-    req.logout();
-    req.flash("success", "Logged you out!");
-    res.redirect("/photos");
+    req.logout(function(err) {
+        if (err) { 
+            alert('Something wrong happened! Going to homepage')
+            res.redirect("/photos");
+        }
+        
+        req.flash("success", "Logged you out!");
+        res.redirect("/photos");
+      });
 });
 
 app.get("/photos/:id/edit", middleware.isCampgroundOwner, function(req, res) {
